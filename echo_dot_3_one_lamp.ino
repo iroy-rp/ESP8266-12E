@@ -2,40 +2,38 @@
 #include <ESP8266WiFi.h>
 #include "fauxmoESP.h"
 
-#define WIFI_SSID "Casa-chetos"
-#define WIFI_PASS "Amalia987_"
-#define SERIAL_BAUDRATE 74880//74880,115200
+#define WIFI_SSID "Casa-chetos"//write the SSID of your house here/ Escribe el SSID de tu Casa
+#define WIFI_PASS "Amalia987_"//Wi-Fi Password 
+#define SERIAL_BAUDRATE 115200//74880,115200
 
 // DEVICES
 #define LED_BUILTIN 2//LED AZUL
-int LedPin = D5;
-#define ID_1 "lampara 2"
+int LedPin = D5;/*Este es el pin del ESP que usaremos, se puede cambiar por cualquier otro. 
+Este es el pin ESP que usaremos, puede ser cambiado por cualquier otro.*/
+#define ID_1 "lampara 2"//this is the name that Alexa will find / Este es el nombre que encontrara tu Dot
 
 fauxmoESP fauxmo;
 
-// configuracion wifi
+//Wi-FI config  / configuracion Wi-Fi 
 void wifiSetup() {
 
-  // Set WIFI module to STA mode
+  // Set WIFI module to STA mode / Pone el ESP en mode Estación
   WiFi.mode(WIFI_STA);
 
-  // Conectando
-
+  // Conectando / connecting
   WiFi.begin(WIFI_SSID, WIFI_PASS);
 
-  // espera
+  // esperando la conexion / waiting the conexion 
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
     delay(100);
   }
 
-  Serial.println("\nListo esta conectado a internet..\n");
+  Serial.println("\nListo esta conectado a internet..\n");// print that you are connected / imprime que estas conectado
   Serial.printf("[WIFI] conectado a %s\n ", WIFI_SSID);
 
 
   // Connected!
-  //Serial.printf("[WIFI] STATION Mode, SSID: %s, IP address: %s\n", WiFi.SSID().c_str(), WiFi.localIP().toString().c_str());
-
 }
 
 void setup() {
