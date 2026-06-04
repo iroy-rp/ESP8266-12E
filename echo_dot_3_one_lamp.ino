@@ -2,8 +2,8 @@
 #include <ESP8266WiFi.h>
 #include "fauxmoESP.h"
 
-#define WIFI_SSID "Casa-chetos"//write the SSID of your house here/ Escribe el SSID de tu Casa
-#define WIFI_PASS "Amalia987_"//Wi-Fi Password 
+#define WIFI_SSID "XXXXXXXX"//write the SSID of your house here/ Escribe el SSID de tu Casa
+#define WIFI_PASS "XXXXXXXX"//Wi-Fi Password 
 #define SERIAL_BAUDRATE 115200//74880,115200
 
 // DEVICES
