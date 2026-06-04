@@ -8,7 +8,7 @@
 
 // DEVICES
 #define LED_BUILTIN 2//LED AZUL
-int LedPin = D5;/*Este es el pin del ESP que usaremos, se puede cambiar por cualquier otro. 
+const int LedPin = D5;/*Este es el pin del ESP que usaremos, se puede cambiar por cualquier otro. 
 Este es el pin ESP que usaremos, puede ser cambiado por cualquier otro.*/
 #define ID_1 "lampara 2"//this is the name that Alexa will find / Este es el nombre que encontrara tu Dot
 
